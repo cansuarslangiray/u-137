@@ -24,7 +24,7 @@ Eski zamanlardan beri, dünya dört elementin gücüyle korunmaktadır: Su, Ate�
 - Karakterlerin birbirine ip ile bağlı olması ve oyuncuların oynarken birlikte hareket etmesi gerekemesi.
 
 ## Hedef Kitle
-- Gamerler
+- Gamerlar
 - Öğrenciler
 
 ## Jüriye Not
