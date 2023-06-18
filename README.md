@@ -41,6 +41,12 @@ N\A
   ![Ekran Görüntüsü (9)](https://github.com/cansuarslangiray/u-137/assets/135131739/c12f654c-6c95-436e-b13a-c94f2a4833d7)
 
 - **Ürün Durumu:** Ekran görüntüleri;
+  
+  ![Ekran Görüntüsü (12)](https://github.com/cansuarslangiray/u-137/assets/135131739/37f61257-7d71-410d-a026-85c2909337da)
+  
+  Su, hava, ateş elementlerinin karakter tasarımları.
+
+  
 
 
 
