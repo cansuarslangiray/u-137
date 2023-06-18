@@ -36,7 +36,7 @@ N\A
 
 - **Sprint içinde tamamlanması tahmin edilen puan:** 80
 - **Puan tamamlama mantığı:** Toplam proje boyunca tamamlanması gereken 320 puanlık backlog bulunmaktadır. 1.sprinte 80 puanla başlanmasına karar verilmiştir.
-- **Daily Scrum:** Daily scrum toplantıları çoğunlukla Discord ses odasında gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır.
+- **Daily Scrum:** Daily scrum toplantıları çoğunlukla Discord ses odasında gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [1.Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/11782024/1.Sprint.Daily.Scrum.docx)
 - **Sprint board update:** Sprint board screenshotları;
   ![Ekran Görüntüsü (11)](https://github.com/cansuarslangiray/u-137/assets/135131739/68e0469d-ddd8-47e9-8690-613ebeb8e928)
 
