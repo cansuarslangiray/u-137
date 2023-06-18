@@ -38,11 +38,11 @@ N\A
 - **Puan tamamlama mantığı:** Toplam proje boyunca tamamlanması gereken 320 puanlık backlog bulunmaktadır. 1.sprinte 80 puanla başlanmasına karar verilmiştir.
 - **Daily Scrum:** Daily scrum toplantıları çoğunlukla Discord ses odasında gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [1.Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/11782024/1.Sprint.Daily.Scrum.docx)
 - **Sprint board update:** Sprint board screenshotları;
-  ![Ekran Görüntüsü (11)](https://github.com/cansuarslangiray/u-137/assets/135131739/68e0469d-ddd8-47e9-8690-613ebeb8e928)
+  ![Ekran görüntüsü 2023-06-19 003551](https://github.com/cansuarslangiray/u-137/assets/135131739/6f53c848-fb19-45f6-afaf-96845bf38a6a)
 
 - **Ürün Durumu:** Ekran görüntüleri;
   
-  ![Ekran Görüntüsü (12)](https://github.com/cansuarslangiray/u-137/assets/135131739/36b47c5b-38cb-458a-bf9e-b19011680ada)
+  ![Ekran Görüntüsü (15)](https://github.com/cansuarslangiray/u-137/assets/135131739/8825c62b-8764-4af9-b96c-999b72cf6381)
 
   Su, hava, ateş elementlerinin karakter tasarımları.
 
@@ -50,7 +50,7 @@ N\A
 
   Karakterlerin arasında 5f mesafe var ve daha fazla ileri gidemiyorlar. Birbirlerine iple bağlı olacaklar.
 
-- **Sprint Review:** Alınan kararlar: Karakterlerin birbirine bağlanması kısmen tamamlanmış, üç karakterin tasarımı tamamlanmış bir karakterin tasarımı devam etmektedir. Eksikler değerlendirilmiştir. Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
+- **Sprint Review:** Alınan kararlar: Karakterlerin birbirine bağlanması tamamlanmış, üç karakterin tasarımı tamamlanmış bir karakterin tasarımı devam etmektedir. Eksikler değerlendirilmiştir. Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
 - **Sprint Retrospective:**
   
    - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
