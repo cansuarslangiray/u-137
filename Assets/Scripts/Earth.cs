@@ -12,16 +12,12 @@ public class Earth : Player
     }
 
     // Update is called once per frame
-    
-
-    protected override void Morph()
+    private void Update()
     {
-        
-        WaterScript.enabled = false;
-        AirScript.enabled = false;
-        EarthScript.enabled = true;
-        FireScript.enabled = false;
-        CurrentForm = Form.Earth;
-
+        GetInput();
+        IsGrounded();
+        Movement();
+        PlayerAnimatıon();
     }
+    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,17 +14,14 @@ public class Air : Player
         Animator = transform.GetChild(1).GetComponent<Animator>();
     }
 
-    // Update is called once per frame
- 
-
-    protected override void Morph()
+    private void Update()
     {
-            WaterScript.enabled = false;
-            AirScript.enabled = true;
-            EarthScript.enabled = false;
-            FireScript.enabled = false;
-            CurrentForm = Form.Air;
-        
-        
+        GetInput();
+        IsGrounded();
+        Movement();
+        PlayerAnimatıon();
+       
     }
+    // Update is called once per frame
+    
 }

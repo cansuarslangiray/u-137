@@ -15,18 +15,12 @@ public class Water : Player
 
   
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        GetInput();
+        IsGrounded();
+        Movement();
+        PlayerAnimatıon();
     }
 
-    protected override void Morph()
-    {
-        WaterScript.enabled = true;
-        AirScript.enabled = false;
-        EarthScript.enabled = false;
-        FireScript.enabled = false;
-        CurrentForm = Form.Water;
-
-    }
 }

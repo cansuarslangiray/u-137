@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,15 +17,13 @@ public class Player : MonoBehaviour
     protected Animator Animator;
     protected Rigidbody2D _rigidbody2D;
     [SerializeField]
-    private float jumpforce = 5.0f;
+    private float jumpforce = 15.0f;
     private bool resetJumpNeeded = false;
     [SerializeField]
     private float speed=5f;
-    private bool grounded = false;
     private SpriteRenderer _spriteRenderer;
-   // private PlayerAnimation _playerAnim;
 
-   protected GameObject WaterModel;
+    protected GameObject WaterModel;
    protected Water WaterScript;
    protected GameObject AirModel;
    protected Air AirScript;
@@ -35,15 +34,15 @@ public class Player : MonoBehaviour
    
    
    public static Form CurrentForm;
-   protected bool IsCasting; 
+   protected bool IsJumping;
+   protected float move;
+   public LayerMask ground;
+   public GameObject CameraPoint;
 
-    [SerializeField] private LayerMask _groundLayer;
-    // Start is called before the first frame update
-    void Start()
+   // Start is called before the first frame update
+    void Awake()
     {
-        
         _rigidbody2D = GetComponent<Rigidbody2D>();
-       // _playerAnim = GetComponent<PlayerAnimation>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
        WaterScript = transform.GetComponent<Water>();
        AirScript = transform.GetComponent<Air>();
@@ -53,52 +52,57 @@ public class Player : MonoBehaviour
        AirModel = transform.GetChild(1).gameObject;
        EarthModel = transform.GetChild(2).gameObject;
        FireModel = transform.GetChild(3).gameObject;
-       IsCasting = false;
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Movement();
-        GetInput();
+       IsJumping = false;
 
     }
+
 
      protected void Movement()
     {
-        grounded = IsGrounded();
-        float move = Input.GetAxis("Horizontal");
+        
+        move = Input.GetAxis("Horizontal");
         Flip(move);
+        //Debug.Log("groundedBefore " + grounded);
+       // Debug.Log("ısGrounded "+ IsGrounded());
+        //Debug.Log("groundedAfter " + grounded);
         
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() == true)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpforce);
             StartCoroutine(ResetJumpNeededRoutine().GetEnumerator());
-            //_playerAnim.Jump(true);
+            IsJumping = true;
+            transform.SetParent(null);
         }
         _rigidbody2D.velocity = new Vector2(move*speed, _rigidbody2D.velocity.y);
-        //_playerAnim.Move(move);
+        
+
     }
 
-    bool IsGrounded()
-    {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1f, 1 << 8);
+   protected bool IsGrounded()
+   {
+       Vector2 position = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        RaycastHit2D hitInfo = Physics2D.Raycast(position, Vector2.down, 2f, ground);
+        Debug.DrawRay(position,Vector2.down,Color.red);
         if (hitInfo.collider != null)
         {
+            if (hitInfo.transform.gameObject.CompareTag("MovingStone"))
+            {
+                transform.SetParent(hitInfo.transform);
+            }
             if (resetJumpNeeded == false)
             {
-                //_playerAnim.Jump(false);
+                IsJumping = false;
                 return true;
             }
             
         }
-
+        
         return false;
     }
 
-    protected void GetInput()
+    protected  void GetInput()
     {
+        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchToWaterCharacter();
@@ -122,6 +126,10 @@ public class Player : MonoBehaviour
         FireModel.SetActive(false);
         EarthModel.SetActive(false);
         AirModel.SetActive(false);
+        AirScript.enabled = false;
+        WaterScript.enabled = true;
+        EarthScript.enabled = false;
+        FireScript.enabled = false;
     }
 
     void SwitchToFireCharacter()
@@ -130,6 +138,10 @@ public class Player : MonoBehaviour
         FireModel.SetActive(true);
         EarthModel.SetActive(false);
         AirModel.SetActive(false);
+        AirScript.enabled = false;
+        WaterScript.enabled = false;
+        EarthScript.enabled = false;
+        FireScript.enabled = true;
     }
     void SwitchToEarthCharacter()
     {
@@ -137,6 +149,10 @@ public class Player : MonoBehaviour
         FireModel.SetActive(false);
         EarthModel.SetActive(true);
         AirModel.SetActive(false);
+        AirScript.enabled = false;
+        WaterScript.enabled = false;
+        EarthScript.enabled = true;
+        FireScript.enabled = false;
     }
     void SwitchToAirCharacter()
     {
@@ -144,6 +160,11 @@ public class Player : MonoBehaviour
         FireModel.SetActive(false);
         EarthModel.SetActive(false);
         AirModel.SetActive(true);
+        
+        AirScript.enabled = true;
+        WaterScript.enabled = false;
+        EarthScript.enabled = false;
+        FireScript.enabled = false;
     }
     
     
@@ -158,16 +179,25 @@ public class Player : MonoBehaviour
     {
           if (move > 0)
           {
-              _spriteRenderer.flipX = false;
+              _spriteRenderer.flipX = true;
           }else if (move < 0)
           { 
-              _spriteRenderer.flipX = true;
+              _spriteRenderer.flipX = false;
           }
                 
               
     }
-    protected virtual void Morph()
+
+    protected void PlayerAnimatıon()
     {
+        Animator.SetBool("Jumping", IsJumping);
+        Animator.SetFloat("Move",Mathf.Abs(move));
     }
 
+    public void Camera()
+    {
+        CameraPoint.transform.position = new Vector2(transform.position.x + 3f, CameraPoint.transform.position.y);
+    }
+    
+    
 }

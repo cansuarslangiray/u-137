@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Charactercontroller : MonoBehaviour
 {
-    public float speed = 0.0f;
+    /*public float speed = 0.0f;
     private Rigidbody2D r2d;
     private Animator _animator;
 
@@ -27,5 +27,5 @@ public class Charactercontroller : MonoBehaviour
         }
         _animator.SetFloat("speed", speed);
         r2d.velocity = new Vector2(x: speed, y: 0f);
-    }
+    }*/
 }

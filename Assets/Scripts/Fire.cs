@@ -12,15 +12,13 @@ public class Fire : Player
     }
 
     // Update is called once per frame
-    
-
-    protected override void Morph()
+    private void Update()
     {
-        WaterScript.enabled = false;
-        AirScript.enabled = false;
-        EarthScript.enabled = false;
-        FireScript.enabled = true;
-        CurrentForm = Form.Fire;
-
+        GetInput();
+        IsGrounded();
+        Movement();
+        PlayerAnimatıon();
     }
+    
+    
 }
