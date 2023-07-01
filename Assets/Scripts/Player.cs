@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
    protected Earth EarthScript;
    protected GameObject FireModel;
    protected Fire FireScript;
+
+    protected bool isWater=false;
    
    
    public static Form CurrentForm;
@@ -130,6 +132,7 @@ public class Player : MonoBehaviour
         WaterScript.enabled = true;
         EarthScript.enabled = false;
         FireScript.enabled = false;
+        isWater = true;
     }
 
     void SwitchToFireCharacter()
@@ -142,6 +145,7 @@ public class Player : MonoBehaviour
         WaterScript.enabled = false;
         EarthScript.enabled = false;
         FireScript.enabled = true;
+        isWater = false;
     }
     void SwitchToEarthCharacter()
     {
@@ -153,6 +157,7 @@ public class Player : MonoBehaviour
         WaterScript.enabled = false;
         EarthScript.enabled = true;
         FireScript.enabled = false;
+        isWater = false;
     }
     void SwitchToAirCharacter()
     {
@@ -165,6 +170,7 @@ public class Player : MonoBehaviour
         WaterScript.enabled = false;
         EarthScript.enabled = false;
         FireScript.enabled = false;
+        isWater = false;
     }
     
     
