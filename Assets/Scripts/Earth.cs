@@ -14,6 +14,7 @@ public class Earth : Player
     // Update is called once per frame
     private void Update()
     {
+        Camera();
         GetInput();
         IsGrounded();
         Movement();

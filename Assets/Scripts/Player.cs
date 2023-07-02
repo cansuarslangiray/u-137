@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private float jumpforce = 15.0f;
     private bool resetJumpNeeded = false;
     [SerializeField]
-    private float speed=5f;
+    private float speed=10f;
     private SpriteRenderer _spriteRenderer;
 
     protected GameObject WaterModel;
@@ -73,7 +73,6 @@ public class Player : MonoBehaviour
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpforce);
             StartCoroutine(ResetJumpNeededRoutine().GetEnumerator());
             IsJumping = true;
-            transform.SetParent(null);
         }
         _rigidbody2D.velocity = new Vector2(move*speed, _rigidbody2D.velocity.y);
         
@@ -83,7 +82,7 @@ public class Player : MonoBehaviour
    protected bool IsGrounded()
    {
        Vector2 position = new Vector2(transform.position.x, transform.position.y - 0.5f);
-        RaycastHit2D hitInfo = Physics2D.Raycast(position, Vector2.down, 2f, ground);
+        RaycastHit2D hitInfo = Physics2D.Raycast(position, Vector2.down, 0.5f, ground);
         Debug.DrawRay(position,Vector2.down,Color.red);
         if (hitInfo.collider != null)
         {
@@ -97,6 +96,10 @@ public class Player : MonoBehaviour
                 return true;
             }
             
+        } else
+        {
+            transform.SetParent(null);
+
         }
         
         return false;
@@ -200,9 +203,9 @@ public class Player : MonoBehaviour
         Animator.SetFloat("Move",Mathf.Abs(move));
     }
 
-    public void Camera()
+    protected void Camera()
     {
-        CameraPoint.transform.position = new Vector2(transform.position.x + 3f, CameraPoint.transform.position.y);
+        CameraPoint.transform.position = new Vector3(transform.position.x + 3f,0f,-10f);
     }
     
     

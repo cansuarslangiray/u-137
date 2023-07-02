@@ -16,6 +16,7 @@ public class Air : Player
 
     private void Update()
     {
+        Camera();
         GetInput();
         IsGrounded();
         Movement();
