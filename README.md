@@ -12,8 +12,8 @@
 ## Ürün İsmi
 Elements Unleashed
 
-
-
+## Product Backlog URL
+[U-137 Miro Backlog Board](https://miro.com/app/board/uXjVM9ptLFw=/)
 
 ## Ürün Açıklaması
 Eski zamanlardan beri, dünya dört elementin gücüyle korunmaktadır: Su, Ateş, Hava ve Toprak. Ancak, uzun bir süredir bu elementler arasında denge bozulmuş ve karanlık bir güç dünyayı tehdit etmeye başlamıştır. Bu tehditle yüzleşmek için, elementlerin seçilmiş temsilcileri uyanmalı ve birlikte çalışarak dünyayı kurtarmalıdır. Karakterlerimiz, her biri bir elementi temsil eden dört genç kahramandır. Su'nun temsilcisi sakin ve derinliklerin bilgeliğine sahiptir. Ateş'in temsilcisi, tutkulu ve cesur bir ruha sahiptir. Hava'nın temsilcisi, özgür ruhlu ve hızlı hareket eden bir karakterdir. Toprak'ın temsilcisi ise güçlü ve sağlam bir duruşa sahip olan bilge bir kahramandır. Karakterlerimiz, elementlerin birleşmesiyle ortaya çıkan antik bir tapınakta bir araya gelirler. Burada, elementlerin koruyucu ruhları onlara rehberlik eder ve özel yeteneklerini açığa çıkarmalarına yardımcı olur. Yolculukları boyunca, dört mevsimi temsil eden farklı bölgeleri keşfederler. İlkbaharda, su elementi karakterin güçlenirken, yazın ateş, sonbaharda hava ve kışın toprak yetenekleri ön plana çıkar. Ancak, elementlerin dünyayı kurtarmak için birleşmesi ve işbirliği yapması gerekmektedir. Karakterlerimiz, elementlerin güçlerini kontrol etmeyi öğrenirken, dünyayı tehdit eden karanlık güçlere karşı savaşırlar. Yolculukları boyunca, zorlu yollardan geçerler, savaşları kazanırlar ve elementlerin uyum içinde çalışarak dünyayı kurtarma görevlerini yerine getirirler.
@@ -56,10 +56,19 @@ N\A
    - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
    - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
 
-  
+  ---
 
+  # Sprint 2
 
+- **Sprint içinde tamamlanması tahmin edilen puan:** 180
+- **Daily Scrum:** Daily scrum toplantıları Discord üzerinden gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [2.Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/11929474/2.Sprint.Daily.Scrum.docx)
+- **Sprint board update:** Sprint board screenshotları;
+  ![Ekran Görüntüsü (18)](https://github.com/cansuarslangiray/u-137/assets/135131739/5016a9dd-b241-4829-bc59-7308c3376e98)
 
+- **Ürün Durumu:** Ekran görüntüleri;
+
+  ![Ekran Görüntüsü (19)](https://github.com/cansuarslangiray/u-137/assets/135131739/c721bd32-92b1-41db-a0c5-4f5ccd0423f4)
+  İlkbahar level design
 
 
 
