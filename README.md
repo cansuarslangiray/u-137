@@ -70,6 +70,9 @@ N\A
   ![Ekran Görüntüsü (19)](https://github.com/cansuarslangiray/u-137/assets/135131739/c721bd32-92b1-41db-a0c5-4f5ccd0423f4)
   İlkbahar level design
 
+  ![sonbahar level design](https://github.com/cansuarslangiray/u-137/assets/135131739/ac2ac623-916a-4e3c-8b71-3613295b09f5)
+  Sonbahar level design
+
   https://github.com/cansuarslangiray/u-137/assets/135131739/15e0f186-4efc-497b-9fb7-fec1f83b87e4
   
   Karakter değişimleri
@@ -77,7 +80,7 @@ N\A
   https://github.com/cansuarslangiray/u-137/assets/135131739/68a7e970-0651-4f02-b8fc-37ccb228ca93
 
   Hareket eden engel
-  
+
 - **Sprint Review:** Alınan kararlar: Karakterlerin birbirine bağlı olması mekaniği MonoBehaviour altında çalışırken NetworkBehaviour altında çalışmadı ek olarak kameralarla ilgili sorun yaşandığı için tek kişilik gameplaye geçildi ve tüm mevsimlerin level design'ı yapılmaya başlandı, karakter animasyonları yapıldı. Eksiklikler değerlendirildi.  Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
 - **Sprint Retrospective:**
   
@@ -86,7 +89,7 @@ N\A
   ## Product Backlog URL
   [U-137 Miro Backlog Board](https://miro.com/app/board/uXjVM9ptLFw=/)
 
- ---
+  ---
 
 
 
