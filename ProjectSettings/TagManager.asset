@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovingStone
+  - Enemy
   layers:
   - Default
   - TransparentFX
