@@ -16,7 +16,6 @@ public class Bee : Enemy,Idamageable
     {
         Debug.Log("Damage()");
         Health--;
-        anim.SetTrigger("Attack");
         isHit = true;
         if (Health < 1)
         {

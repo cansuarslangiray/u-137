@@ -10,6 +10,7 @@ public class WaterPowerEffect : MonoBehaviour
     private WaterEvent _waterEvent;
     [FormerlySerializedAs("_waterSprite")] public SpriteRenderer waterSprite;
     private bool _isLeft;
+    private SpriteRenderer _sprite;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class WaterPowerEffect : MonoBehaviour
         _startPosition = transform.position;
         _waterEvent = GetComponent<WaterEvent>();
         waterSprite = GameObject.Find("Water").GetComponent<SpriteRenderer>();
+        _sprite = GetComponent<SpriteRenderer>();
         Flip();
         
     }
@@ -26,6 +28,7 @@ public class WaterPowerEffect : MonoBehaviour
         
         if (_isLeft==false)
         {
+            
             transform.Translate(Vector3.right * 3 * Time.deltaTime);
 
         }
@@ -63,12 +66,14 @@ public class WaterPowerEffect : MonoBehaviour
     {
         if (waterSprite.flipX == false)
         {
-            _isLeft = false;
+            _sprite.flipX = true;
+            _isLeft = true;
 
         }
         else if (waterSprite.flipX == true)
         {
-            _isLeft = true;
+            _sprite.flipX = false;
+            _isLeft = false;
 
         }
     }
