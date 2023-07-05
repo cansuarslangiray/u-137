@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     protected Animator Animator;
     protected Rigidbody2D _rigidbody2D;
     [SerializeField]
-    private float jumpforce = 15.0f;
+    public float jumpforce = 15.0f;
     private bool resetJumpNeeded = false;
     [SerializeField]
     private float speed=10f;
