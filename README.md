@@ -6,7 +6,7 @@
 - Emine Karaotmarlı: Scrum Master
 - Cansu Arslangiray: Product Owner
 - Şevval Küçük: Developer
-- Sedat Karadağ: Developer
+- Sedat Karadağ: Aktif Olmayan Üye
 - Berivan Genç: Aktif Olmayan Üye
 
 ## Ürün İsmi
