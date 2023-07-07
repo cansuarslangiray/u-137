@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
+using Color = UnityEngine.Color;
 
 public enum Form
 {
@@ -21,6 +23,12 @@ public class Player : MonoBehaviour
     private bool resetJumpNeeded = false;
     [SerializeField]
     private float speed=10f;
+
+    [SerializeField] public float hearth =10f;
+    [SerializeField] private Transform fallPoint;
+    [SerializeField] private Transform startPoint;
+
+
     private SpriteRenderer _spriteRenderer;
 
     protected GameObject WaterModel;
@@ -33,13 +41,18 @@ public class Player : MonoBehaviour
    protected Fire FireScript;
 
     protected bool isWater=false;
-   
-   
-   public static Form CurrentForm;
-   protected bool IsJumping;
-   protected float move;
-   public LayerMask ground;
-   public GameObject CameraPoint;
+    public static Form CurrentForm;
+    protected bool IsJumping;
+    protected float move;    
+    protected float moveV;
+    private bool _isFallen;
+    
+
+    
+    public LayerMask ground;
+    public GameObject CameraPoint;
+    public GameObject point;
+
 
 
    // Start is called before the first frame update
@@ -64,6 +77,8 @@ public class Player : MonoBehaviour
     {
         
         move = Input.GetAxis("Horizontal");
+        moveV = Input.GetAxis("Vertical");
+
         Flip(move);
         //Debug.Log("groundedBefore " + grounded);
        // Debug.Log("ısGrounded "+ IsGrounded());
@@ -75,8 +90,12 @@ public class Player : MonoBehaviour
             StartCoroutine(ResetJumpNeededRoutine().GetEnumerator());
             IsJumping = true;
         }
+        if (Mathf.Abs(transform.position.x-point.transform.position.x)< 1 && Input.GetKey(KeyCode.W))
+        {
+            
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, moveV*15f);
+        }
         _rigidbody2D.velocity = new Vector2(move*speed, _rigidbody2D.velocity.y);
-        
 
     }
 
@@ -211,7 +230,29 @@ public class Player : MonoBehaviour
 
     protected void Camera()
     {
-        CameraPoint.transform.position = new Vector3(transform.position.x + 3f,transform.position.y+1.5f,-10f);
+        if (Vector2.Distance(transform.position, fallPoint.position)<5)
+        {
+            _isFallen = true;
+
+        }
+
+        if (Vector2.Distance(transform.position, startPoint.position) < 5)
+        {
+            _isFallen = false;
+        }
+
+        if (_isFallen)
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f,transform.position.y+3f,-10f);
+
+        }
+        else 
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f,0f,-10f);
+
+        }
+
+        
     }
 
     public virtual void Attack()
