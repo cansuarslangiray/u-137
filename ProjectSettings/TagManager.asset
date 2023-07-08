@@ -7,6 +7,8 @@ TagManager:
   - MovingStone
   - Enemy
   - CameraPointY
+  - Collectible
+  - fireObs
   layers:
   - Default
   - TransparentFX

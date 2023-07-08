@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
    protected Fire FireScript;
 
     protected bool isWater=false;
+    protected bool isFire=false;
     public static Form CurrentForm;
     protected bool IsJumping;
     protected float move;    
@@ -161,6 +162,7 @@ public class Player : MonoBehaviour
         EarthScript.enabled = false;
         FireScript.enabled = false;
         isWater = true;
+        isFire = false;
     }
 
     void SwitchToFireCharacter()
@@ -174,6 +176,7 @@ public class Player : MonoBehaviour
         EarthScript.enabled = false;
         FireScript.enabled = true;
         isWater = false;
+        isFire = true;
     }
     void SwitchToEarthCharacter()
     {
@@ -186,6 +189,7 @@ public class Player : MonoBehaviour
         EarthScript.enabled = true;
         FireScript.enabled = false;
         isWater = false;
+        isFire = false;
     }
     void SwitchToAirCharacter()
     {
@@ -199,6 +203,7 @@ public class Player : MonoBehaviour
         EarthScript.enabled = false;
         FireScript.enabled = false;
         isWater = false;
+        isFire = false;
     }
     
     
