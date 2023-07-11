@@ -99,11 +99,11 @@ public class Player : MonoBehaviour
             IsJumping = true;
         }
 
-        if (Mathf.Abs(transform.position.x - _ladderPoint.transform.position.x) < 0.5 && Input.GetKey(KeyCode.W) &&
+       /* if (Mathf.Abs(transform.position.x - _ladderPoint.transform.position.x) < 0.5 && Input.GetKey(KeyCode.W) &&
             Mathf.Abs(transform.position.y - _ladderPoint.transform.position.y) < 7)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, moveV * 10f);
-        }
+        }*/
 
         _rigidbody2D.velocity = new Vector2(move * speed, _rigidbody2D.velocity.y);
     }
@@ -244,7 +244,7 @@ public class Player : MonoBehaviour
 
     protected void Camera()
     {
-        if (Vector2.Distance(transform.position, _fallPoint.position) < 5)
+        /*if (Vector2.Distance(transform.position, _fallPoint.position) < 5)
         {
             _isFallen = true;
             _isUnderground = false;
@@ -270,7 +270,7 @@ public class Player : MonoBehaviour
             _isFallen = true;
             _isStartPoint = false;
             _isUnderground = false;
-        }
+        }*/
 
         if (_isFallen)
         {
