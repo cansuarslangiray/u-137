@@ -246,7 +246,7 @@ TextureImporter:
       213: 21300160
     second: cave-tileset_80
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -290,7 +290,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -306,7 +306,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -2060,7 +2059,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       cave-tileset_36: 21300072
-      cave-tileset_7: 21300014
+      cave-tileset_29: 21300058
       cave-tileset_51: 21300102
       cave-tileset_10: 21300020
       cave-tileset_74: 21300148
@@ -2139,7 +2138,7 @@ TextureImporter:
       cave-tileset_40: 21300080
       cave-tileset_49: 21300098
       cave-tileset_14: 21300028
-      cave-tileset_29: 21300058
+      cave-tileset_7: 21300014
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
