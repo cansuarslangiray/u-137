@@ -96,7 +96,7 @@ N\A
  - **Sprint içinde tamamlanması tahmin edilen puan:** 60
 - **Daily Scrum:** Daily scrum toplantıları Discord üzerinden gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [3. Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/12063866/3.Sprint.Daily.Scrum.docx)
 - **Sprint board update:** Sprint board screenshotları;
- 
+  ![Ekran görüntüsü 2023-07-16 203150](https://github.com/cansuarslangiray/u-137/assets/135131739/27911c17-c50d-4310-8a9b-dbd7946a307c)
 
 - **Ürün Durumu:** Ekran görüntüleri;
 
@@ -110,7 +110,7 @@ N\A
   
   Resume Menu/Graphic Quality settings
 
-  - **Sprint Review:** Alınan kararlar: Main menu ve tüm level designler bitmiştir. Kış level design ve sinematik iptal edilmiştir. Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
+  - **Sprint Review:** Alınan kararlar: Main menu ve tüm level designler bitmiştir. Sinematik iptal edilmiştir. Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
   - **Sprint Retrospective:**
   
    - Takım üyelerinin gelecek projelerde daha aktif olması gerektiğine vurgu yapılmıştır.
