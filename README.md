@@ -56,9 +56,9 @@ N\A
    - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
    - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
 
-  ---
+ ---
 
-  # Sprint 2
+# Sprint 2
 
 - **Sprint içinde tamamlanması tahmin edilen puan:** 180
 - **Daily Scrum:** Daily scrum toplantıları Discord üzerinden gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [2.Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/11929474/2.Sprint.Daily.Scrum.docx)
@@ -86,10 +86,34 @@ N\A
   
    - Takım üyelerinin gelecek sprintte aktif olması gerektiğine vurgu yapılmıştır.
    
-  ## Product Backlog URL
-  [U-137 Miro Backlog Board](https://miro.com/app/board/uXjVM9ptLFw=/)
+ ## Product Backlog URL
+ [U-137 Miro Backlog Board](https://miro.com/app/board/uXjVM9ptLFw=/)
 
-  ---
+ ---
+
+ # Sprint 3
+
+ - **Sprint içinde tamamlanması tahmin edilen puan:** 60
+- **Daily Scrum:** Daily scrum toplantıları Discord üzerinden gerçekleşmiştir. Daily scrum toplantısı örneği word dosyası olarak Readme'de tarafımızdan paylaşılmaktadır. [3. Sprint Daily Scrum.docx](https://github.com/cansuarslangiray/u-137/files/12063866/3.Sprint.Daily.Scrum.docx)
+- **Sprint board update:** Sprint board screenshotları;
+ 
+
+- **Ürün Durumu:** Ekran görüntüleri;
+
+  ![Ekran Görüntüsü (34)](https://github.com/cansuarslangiray/u-137/assets/135131739/4291c03b-1596-46c8-bb2d-d579f9a03a45)
+  Yaz level design
+
+  ![Ekran Görüntüsü (33)](https://github.com/cansuarslangiray/u-137/assets/135131739/cf12a860-9afb-4ab2-b0c0-df4c7ffcc04c)
+  Main Menu
+  
+  https://github.com/cansuarslangiray/u-137/assets/135131739/93740c60-6e02-46a7-a6b5-eed388720f32
+  
+  Resume Menu/Graphic Quality settings
+
+  - **Sprint Review:** Alınan kararlar: Main menu ve tüm level designler bitmiştir. Kış level design ve sinematik iptal edilmiştir. Katılımcılar; Cansu Arslangiray, Emine Karaotmarlı.
+  - **Sprint Retrospective:**
+  
+   - Takım üyelerinin gelecek projelerde daha aktif olması gerektiğine vurgu yapılmıştır.
 
 
 
