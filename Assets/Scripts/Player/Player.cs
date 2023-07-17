@@ -22,10 +22,16 @@ public class Player : MonoBehaviour
     private bool resetJumpNeeded = false;
     [SerializeField] private float speed = 10f;
 
-    [SerializeField] public float hearth = 10f;
+    [SerializeField] public float hearth = 3f;
     private Transform _fallPoint;
     private Transform _startPoint;
     private Transform _undergroundPoint;
+    
+    private Transform _winterFallPoint;
+    private Transform _winterUndergroundPoint;
+    private WinterPoints _winterPoints;
+    private bool _winterFall;
+    private bool _winterUnderground;
 
 
     private SpriteRenderer _spriteRenderer;
@@ -68,14 +74,21 @@ public class Player : MonoBehaviour
         AirModel = transform.GetChild(1).gameObject;
         EarthModel = transform.GetChild(2).gameObject;
         FireModel = transform.GetChild(3).gameObject;
+
         if (SceneManager.GetActiveScene().name == "Autumn")
         {
-            
             _autumnPoints = GameObject.Find("Points").GetComponent<AutumnPoints>();
             _fallPoint = _autumnPoints.fallPoint;
             _startPoint = _autumnPoints.startPoint;
             _undergroundPoint = _autumnPoints.undergroundPoint;
             _ladderPoint = _autumnPoints.ladderPoint;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Winter")
+        {
+            _winterPoints=GameObject.Find("Points").GetComponent<WinterPoints>();
+            _winterFallPoint = _winterPoints.fallPoint;
+            _winterUndergroundPoint = _winterPoints.undergroundPoint;
         }
 
         IsJumping = false;
@@ -88,9 +101,6 @@ public class Player : MonoBehaviour
         moveV = Input.GetAxis("Vertical");
 
         Flip(move);
-        //Debug.Log("groundedBefore " + grounded);
-        // Debug.Log("ısGrounded "+ IsGrounded());
-        //Debug.Log("groundedAfter " + grounded);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() == true)
         {
@@ -99,11 +109,15 @@ public class Player : MonoBehaviour
             IsJumping = true;
         }
 
-       /* if (Mathf.Abs(transform.position.x - _ladderPoint.transform.position.x) < 0.5 && Input.GetKey(KeyCode.W) &&
-            Mathf.Abs(transform.position.y - _ladderPoint.transform.position.y) < 7)
+        if (SceneManager.GetActiveScene().name == "Autumn")
         {
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, moveV * 10f);
-        }*/
+            if (Mathf.Abs(transform.position.x - _ladderPoint.transform.position.x) < 0.5 && Input.GetKey(KeyCode.W) &&
+                Mathf.Abs(transform.position.y - _ladderPoint.transform.position.y) < 7)
+            {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, moveV * 10f);
+            }
+        }
+
 
         _rigidbody2D.velocity = new Vector2(move * speed, _rigidbody2D.velocity.y);
     }
@@ -112,7 +126,7 @@ public class Player : MonoBehaviour
     {
         Vector2 position = new Vector2(transform.position.x, transform.position.y - 0.5f);
         RaycastHit2D hitInfo = Physics2D.Raycast(position, Vector2.down, 0.7f, ground);
-        Debug.DrawRay(position, Vector2.down/2, Color.red);
+        Debug.DrawRay(position, Vector2.down / 2, Color.red);
         if (hitInfo.collider != null)
         {
             if (hitInfo.transform.gameObject.CompareTag("MovingStone"))
@@ -242,9 +256,9 @@ public class Player : MonoBehaviour
         Animator.SetFloat("Move", Mathf.Abs(move));
     }
 
-    protected void Camera()
+    protected void AutumnCamera()
     {
-        /*if (Vector2.Distance(transform.position, _fallPoint.position) < 5)
+        if (Vector2.Distance(transform.position, _fallPoint.position) < 5)
         {
             _isFallen = true;
             _isUnderground = false;
@@ -270,7 +284,8 @@ public class Player : MonoBehaviour
             _isFallen = true;
             _isStartPoint = false;
             _isUnderground = false;
-        }*/
+        }
+
 
         if (_isFallen)
         {
@@ -283,6 +298,51 @@ public class Player : MonoBehaviour
         else if (_isUnderground)
         {
             CameraPoint.transform.position = new Vector3(transform.position.x + 3f, -16.0f, -10f);
+        }
+        else
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f, 0f, -10f);
+        }
+    }
+
+    protected void WinterCamera()
+    {
+        if (Vector2.Distance(transform.position, _winterFallPoint.position) < 5)
+        {
+            _winterFall = true;
+            _winterUnderground = false;
+        }
+
+        if (Vector2.Distance(transform.position, _winterUndergroundPoint.position) < 5)
+        {
+            _winterFall = false;
+            _winterUnderground = true;
+        }
+        if (_winterFall)
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f, transform.position.y -3f, -10f);
+        }
+        else if (_winterUnderground)
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f,-13f, -10f);
+        }
+        else
+        {
+            CameraPoint.transform.position = new Vector3(transform.position.x + 3f, -7.87f, -10f);
+
+        }
+    }
+
+
+    public void Damage()
+    {
+        if (hearth > 1)
+        {
+            hearth--;
+        }
+        else if (hearth <= 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Water : Player, Idamageable
 {
@@ -19,7 +20,15 @@ public class Water : Player, Idamageable
     // Update is called once per frame
     private void Update()
     {
-        Camera();
+        if (SceneManager.GetActiveScene().name == "Autumn")
+        {
+             AutumnCamera();
+        }
+        if (SceneManager.GetActiveScene().name == "Winter")
+        {
+            WinterCamera();
+        }  
+
         GetInput();
         IsGrounded();
         Movement();

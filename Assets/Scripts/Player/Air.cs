@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Air : Player
 {
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +16,18 @@ public class Air : Player
 
     private void Update()
     {
-        Camera();
+        if (SceneManager.GetActiveScene().name == "Autumn")
+        {
+            AutumnCamera();
+        }
+        if (SceneManager.GetActiveScene().name == "Winter")
+        {
+            WinterCamera();
+        }  
         GetInput();
         IsGrounded();
         Movement();
         PlayerAnimatıon();
-       
     }
     // Update is called once per frame
-    
 }
